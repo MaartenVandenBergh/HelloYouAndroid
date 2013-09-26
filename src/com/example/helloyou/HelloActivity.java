@@ -2,7 +2,12 @@ package com.example.helloyou;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
+import android.text.TextUtils;
 import android.view.Menu;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class HelloActivity extends Activity {
 
@@ -19,5 +24,19 @@ public class HelloActivity extends Activity {
         getMenuInflater().inflate(R.menu.hello, menu);
         return true;
     }
-    
+    public void sayHello(View view) {
+    	Context context = getApplicationContext();
+    	EditText mEdit   = (EditText)findViewById(R.id.editText1);
+    	CharSequence text;
+    	if(!TextUtils.isEmpty(mEdit.getText().toString())){
+    		text = "Hello " +mEdit.getText().toString()+ ",\nhow are you today?";
+    	}
+    	else{
+    		text = "FOLLOW INSTRUCTIONS DAMN IT!";
+    	}
+    	int duration = Toast.LENGTH_SHORT;
+
+    	Toast toast = Toast.makeText(context, text, duration);
+    	toast.show();
+    }
 }

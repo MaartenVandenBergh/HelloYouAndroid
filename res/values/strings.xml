@@ -4,5 +4,7 @@
     <string name="app_name">HelloYou</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="headerText">Give me your name!</string>
+    <string name="buttonString">Hello</string>
 
 </resources>
