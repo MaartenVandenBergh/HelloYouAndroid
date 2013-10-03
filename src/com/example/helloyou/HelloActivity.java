@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
@@ -25,6 +26,7 @@ public class HelloActivity extends Activity {
         return true;
     }
     public void sayHello(View view) {
+    	Log.v("TestLog", "Succes!");
     	Context context = getApplicationContext();
     	EditText mEdit   = (EditText)findViewById(R.id.editText1);
     	CharSequence text;
